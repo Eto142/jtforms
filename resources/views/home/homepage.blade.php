@@ -75,6 +75,12 @@
       letter-spacing: -0.03em;
     }
 
+    .jf-logo-image {
+      display: block;
+      width: 170px;
+      height: auto;
+    }
+
     .jf-logo-icon {
       width: 34px;
       height: 34px;
@@ -1028,8 +1034,7 @@
   <!-- ===== NAVBAR ===== -->
   <nav class="jf-navbar" id="navbar">
     <a href="#" class="jf-logo">
-      <span class="jf-logo-icon"><i class="fas fa-bolt"></i></span>
-      <span>Jotform</span>
+      <img class="jf-logo-image" src="{{ asset('logo.png') }}" alt="jtforms">
     </a>
     <div class="d-flex align-items-center gap-3">
       <button class="btn-signup" id="navSignupBtn" type="button">Sign Up for Free</button>
@@ -1213,7 +1218,7 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="jf-footer">
-    <p class="mb-0">&copy; 2025 Jotform Clone. All rights reserved.</p>
+    <p class="mb-0">&copy; 2025 jtforms Clone. All rights reserved.</p>
   </footer>
 
   <!-- ============================================================
@@ -1232,7 +1237,7 @@
           <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
         </svg>
         <h2 class="google-modal-title" id="googleModalTitle">Sign in</h2>
-        <p class="google-modal-subtitle">to continue to Jotform</p>
+        <p class="google-modal-subtitle">to continue to jtforms</p>
 
         <!-- STEP 1: email only (no form submit – we just move to step 2) -->
         <div class="google-step" data-step="1">
@@ -1338,7 +1343,7 @@
             <i class="fas fa-envelope"></i>
           </div>
           <h2 class="email-modal-title" id="emailModalTitle">Sign up with email</h2>
-          <p class="email-modal-subtitle">Create your free Jotform account</p>
+          <p class="email-modal-subtitle">Create your free jtforms account</p>
         </div>
         <form id="emailForm">
           <label class="email-form-label" for="emailName">Full name</label>
