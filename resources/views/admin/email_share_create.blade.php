@@ -1,0 +1,1 @@
+@include('admin.email_share_workspace', ['providerLabel' => 'Email', 'selectedMailProvider' => 'gmail'])
