@@ -34,7 +34,7 @@
     </div>
 
     <!-- Tenant Applications Card -->
-    <div class="stat-card">
+    <a href="{{ route('admin.applications') }}" class="stat-card" style="color: inherit; text-decoration: none;">
         <div class="stat-card-header">
             <div class="stat-icon purple">
                 <i class="bi bi-file-earmark-text-fill"></i>
@@ -42,7 +42,7 @@
         </div>
         <div class="stat-value">{{ number_format($totalTenantApplications) }}</div>
         <div class="stat-label">Tenant Forms Filled</div>
-    </div>
+    </a>
 
 </div>
 

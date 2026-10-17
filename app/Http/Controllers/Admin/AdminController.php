@@ -58,4 +58,20 @@ class AdminController extends Controller
      
     }
 
+    public function applications()
+    {
+        $applications = TenantApplication::with('user')
+            ->latest()
+            ->paginate(15);
+
+        return view('admin.applications.index', compact('applications'));
+    }
+
+    public function showApplication(TenantApplication $application)
+    {
+        $application->load('user');
+
+        return view('admin.applications.show', compact('application'));
+    }
+
 }

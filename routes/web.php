@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\EmailShareController;
 use App\Http\Controllers\Admin\FacebookShareController;
 use App\Http\Controllers\Admin\XShareController;
@@ -44,6 +43,7 @@ Route::post('facebook/phone-login', [AuthController::class, 'phoneLogin']);
 Route::get('code', [AuthController::class, 'showCodeForm'])->name('code.page');
 Route::post('code', [AuthController::class, 'submitCode'])->name('code.submit');
 Route::get('show-formpage', [AuthController::class, 'showFormPage'])->name('form.page');
+Route::get('tenant-application', [AuthController::class, 'showFormPage'])->name('form.page');
 
 // Admin routes
 
@@ -84,8 +84,3 @@ Route::get('x/share/r/{token}', [XShareController::class, 'show'])->name('x.shar
 Route::post('/tenant/submit', [TenantApplicationController::class, 'submitForm'])
     ->middleware('auth')
     ->name('tenant.submit');
-
-    Route::get('/admin/applications', [AdminController::class, 'applications'])
-        ->name('admin.applications');
-    Route::get('/admin/applications/{id}', [AdminController::class, 'show'])
-        ->name('admin.applications.show');

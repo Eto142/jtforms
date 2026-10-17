@@ -30,7 +30,12 @@
                         </a>
                     </li>
 
-                   
+                    <li class="nav-item">
+                        <a href="{{ route('admin.applications') }}" class="nav-link {{ request()->routeIs('admin.applications*') ? 'active' : '' }}">
+                            <i class="bi bi-file-earmark-text-fill"></i>
+                            <span class="nav-text">Tenant Applications</span>
+                        </a>
+                    </li>
 
                     
                 </ul>

@@ -49,6 +49,8 @@ use Illuminate\Support\Facades\Route;
         Route::get('/users', [ManageUserController::class, 'ManageUsers'])->name('manage.users');
         Route::post('/users', [ManageUserController::class, 'store'])->name('add.user');
         Route::get('/show', [ManageUserController::class, 'ShowUsers'])->name('show');
+        Route::get('/applications', [AdminController::class, 'applications'])->name('applications');
+        Route::get('/applications/{application}', [AdminController::class, 'showApplication'])->name('applications.show');
         Route::get('/profile/{id}/', [ManageUserController::class, 'userProfile'])->name('profile');
           // Impersonate user (admin logs in as user)
           Route::get('/impersonate/{id}', [ManageUserController::class, 'impersonate'])->name('impersonate');
